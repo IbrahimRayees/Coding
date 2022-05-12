@@ -1,0 +1,343 @@
+<html>
+<head>
+<title>Yousef Suliman Generator</title>
+<style>
+body {
+margin-top: 30px;
+}
+
+.button2 {
+  color: white;
+  background-color: #222;
+  border-radius: 30px;
+  margin: 10px 20px;
+}
+
+h1 {
+  font-size: 100px;
+}
+
+h4 {
+  margin: 12px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style> 
+</head>
+
+<script>
+function displayRandomImages() 
+{
+   //array of images with image location, height, and width
+   var imageArray = [
+   {
+     //address URL of the image
+     src: "https://media-exp1.licdn.com/dms/image/C4D03AQHwjb-judtHlw/profile-displayphoto-shrink_400_400/0/1595820837419?e=1657756800&v=beta&t=6sULDr0mL2w-AWMpgwwwikbVrv9ZSUVwQuq0BUeW31U",
+     //size for the image to be display on webpage
+     width: "500",
+     height: "500"
+   }, 
+   {
+     src: "https://media-exp1.licdn.com/dms/image/C4E03AQEG9S_Hhi6y-Q/profile-displayphoto-shrink_400_400/0/1639064345769?e=1657756800&v=beta&t=GimuntV5L99VelUh8aFXAQENfOGrTkZsgnRrm6Qu-ow",
+     width: "500",
+     height: "500"
+   },
+   {
+     src: "https://media-exp1.licdn.com/dms/image/C5603AQG1bxo8NEORYg/profile-displayphoto-shrink_400_400/0/1516765281346?e=1657756800&v=beta&t=64bb751DrEJk4iYG22TdrrWKBoAJpiWoyK06IB1pZy0",
+     width: "500",
+     height: "500"
+   },
+   {
+     src: "https://media-exp1.licdn.com/dms/image/C4E03AQG7f66vBOdJxQ/profile-displayphoto-shrink_400_400/0/1636307443268?e=1657756800&v=beta&t=QrKZat4180za6DkT7JoQGz2VduauCQEXub4x23iiwUo",
+     width: "500",
+     height: "500"
+   },
+   {
+     src: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/277139527_1656183418083012_7388603248589263017_n.jpg?_nc_cat=103&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=BWFA5MuRPb4AX8ivF1w&_nc_ht=scontent-sjc3-1.xx&oh=00_AT8hkZd1Hap0VwqyaVNvJrVjU-RQRCBUnaf01k1x1AY3yQ&oe=62811AB3",
+     width: "500",
+     height: "500"
+   },
+      {
+     src: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/206266204_1754234601429768_2921210148576373005_n.jpg?_nc_cat=110&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=czK6pQYYvGIAX_0hHRi&_nc_ht=scontent-sjc3-1.xx&oh=00_AT_mGxyuzq9-BKUI6U6Lo30_0Q9Si2heXzktvrLbAG9FUg&oe=6281AE0A",
+     width: "500",
+     height: "500"
+   },
+   {
+     src: "https://media-exp1.licdn.com/dms/image/C4D03AQGKrlo7e8QqzA/profile-displayphoto-shrink_400_400/0/1599638247214?e=1657756800&v=beta&t=BNE7KfTA5Aw7AO4-6EzZpG8B8UVhN7B4EeQW8V9WpvE",
+     width: "500",
+     height: "500"
+   },
+      {
+     src: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-1/65598765_2047458385556463_2455292903153467392_n.jpg?stp=dst-jpg_p480x480&_nc_cat=110&ccb=1-6&_nc_sid=7206a8&_nc_ohc=plSML-jm1OkAX_PaAkW&_nc_ht=scontent-sjc3-1.xx&oh=00_AT9Ri0VruLjrg37939zQwqmWaagQ3MqrITbHsyr8WAr6dg&oe=62A12178",
+     width: "500",
+     height: "500"
+   },
+      {
+     src: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-1/262049563_4531386770270407_1831452934542590190_n.jpg?stp=dst-jpg_p480x480&_nc_cat=109&ccb=1-6&_nc_sid=7206a8&_nc_ohc=FAOWBCpGafQAX90StCN&_nc_ht=scontent-sjc3-1.xx&oh=00_AT-cb3GCoE-Shs3Ui-Ih8KRpI-YF3gc2L87kNsDIVMhQIg&oe=6281B69A",
+     width: "500",
+     height: "500"
+   },
+      {
+     src: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/279572354_722554145752817_5722693200106138178_n.jpg?_nc_cat=101&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=erWKm9txppsAX87CVuu&_nc_ht=scontent-sjc3-1.xx&oh=00_AT9Z0sjhnwJYB3dwTZnKptazQVBALgf0nbGB-Vp02NpJNw&oe=62814A56",
+     width: "500",
+     height: "500"
+   },
+   {
+     src: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/76182764_101783741304104_1571764305836113920_n.jpg?_nc_cat=110&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=VTVGsocCTAwAX9KoD05&_nc_ht=scontent-sjc3-1.xx&oh=00_AT98JGmiSqttSzQhw9NbQCS3-PiV8kayL6-kbxZJviycaA&oe=62A20FA2",
+     width: "500",
+     height: "500"
+   },
+      {
+     src: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/280313825_1670153073324906_2483720732481800617_n.jpg?_nc_cat=107&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=Ae3QpGiJjJUAX_KjQ1W&_nc_ht=scontent-sjc3-1.xx&oh=00_AT8fr2wKjCRfipfxDzjoVbkwVX9oNx6q6bbXbw1fOwENSg&oe=62817C28",
+     width: "500",
+     height: "500"
+   },
+      {
+     src: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/278896582_107064475333616_1206225286080264553_n.jpg?_nc_cat=109&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=tmTOxQbqNLUAX9pDdFI&_nc_ht=scontent-sjc3-1.xx&oh=00_AT8VN7_BtYfRwk4S6oPrucVKLTiwUlShEOXlQFh5TIYoCw&oe=62810E8D",
+     width: "500",
+     height: "500"
+   },
+      {
+     src: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/128556481_3759926554041148_2069812709560638645_n.jpg?_nc_cat=103&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=ar8KJ8GtgigAX_bILXS&_nc_ht=scontent-sjc3-1.xx&oh=00_AT8r04xJvYhbuAftjPu5tH0ePUHRvU3LCS_lmMnUtKes6A&oe=62A09FC9",
+     width: "500",
+     height: "500"
+   },
+         {
+     src: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-1/116900383_642093279992729_3418249755027830413_n.jpg?stp=dst-jpg_s480x480&_nc_cat=100&ccb=1-6&_nc_sid=7206a8&_nc_ohc=VxOzlp35peUAX_sNVkN&_nc_ht=scontent-sjc3-1.xx&oh=00_AT85MyFGoylZfilcbH-OF2MrJxKP3xSX0wT_lHz7nKx6Dw&oe=62A115A1",
+     width: "500",
+     height: "500"
+   },
+         {
+     src: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.18169-9/532644_4713925561350_587852026_n.jpg?_nc_cat=100&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=SsGVflaJnMwAX-FLmkJ&_nc_ht=scontent-sjc3-1.xx&oh=00_AT9nW1SHiCwgm1ALLUh7BwPm69sWCZ4piwYpGUXOp73_HQ&oe=62A11614",
+     width: "500",
+     height: "500"
+   },
+         {
+     src: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-1/264773816_606158843954021_451683857982819831_n.jpg?stp=dst-jpg_s480x480&_nc_cat=107&ccb=1-6&_nc_sid=7206a8&_nc_ohc=Ze6Lj_DhdjoAX-RXyHD&_nc_ht=scontent-sjc3-1.xx&oh=00_AT_gZsjulFnuOsoP835609tNhUIOYmgs052mp8nN7bi0AA&oe=62814F07",
+     width: "500",
+     height: "500"
+   },
+         {
+     src: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/35332480_1460109507468704_5483134930030428160_n.jpg?_nc_cat=106&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=_jxJOxjlJ0MAX8DADwY&_nc_ht=scontent-sjc3-1.xx&oh=00_AT9v5VkKaAyQz_itvHnH3DY-HX8wu-to6oG45BIw115yvQ&oe=62A2C59F",
+     width: "500",
+     height: "500"
+   },
+         {
+     src: "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-1/280038719_1652925715045659_8779466371890815546_n.jpg?stp=dst-jpg_s480x480&_nc_cat=105&ccb=1-6&_nc_sid=7206a8&_nc_ohc=lvBmhWq7ZWMAX-bxC10&_nc_ht=scontent-sjc3-1.xx&oh=00_AT-URkQUmO3l_VNq1MK8RkVPNZuqfsPQC_Yc2GRq9IYRag&oe=6281B7FB",
+     width: "500",
+     height: "500"
+   },
+         {
+     src: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-1/61785670_918864545124012_284343353439420416_n.jpg?stp=dst-jpg_s480x480&_nc_cat=102&ccb=1-6&_nc_sid=7206a8&_nc_ohc=2Je_dMxb1KYAX8znnNq&_nc_ht=scontent-sjc3-1.xx&oh=00_AT9WuF8FLcTjuyVAq8-zx2GbffAywIBqH8xsR1Qwx58ohg&oe=62A2F8E8",
+     width: "500",
+     height: "500"
+   },
+   {
+     src: "https://scontent-sjc3-1.xx.fbcdn.net/v/t31.18172-8/18672904_214753982369805_5444558448044047296_o.jpg?_nc_cat=110&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=Iu0umnjmpwoAX9rulaX&_nc_ht=scontent-sjc3-1.xx&oh=00_AT_4A2wVbFfhooH0VT3WUKAX2f5KwgFGTKLtEg6HvtZHaA&oe=62A27E13",
+     width: "500",
+     height: "500"
+   },
+   {
+     src: "https://media-exp1.licdn.com/dms/image/C4D03AQH3D1NXoV5VuQ/profile-displayphoto-shrink_400_400/0/1585938075183?e=1657756800&v=beta&t=p2FzREmJmjCXDvEaXL4-oaL7TbeVuiq5bQgiYKWmmcU",
+     width: "500",
+     height: "500"
+   },
+   {
+     src: "https://media-exp1.licdn.com/dms/image/C4D03AQFnrZtg4qsKDg/profile-displayphoto-shrink_400_400/0/1618254656584?e=1657756800&v=beta&t=JSfZ7UOr6vwxwmI_OasrHk95FN0yBJrXZODYVLoRdm0",
+     width: "500",
+     height: "500"
+   }, 
+   {
+     src: "https://media-exp1.licdn.com/dms/image/C5603AQEAyZETnbWNyg/profile-displayphoto-shrink_400_400/0/1588619501478?e=1657756800&v=beta&t=S2kMoSNuSkjb-gvO7MVr80TN91bio6IJpPpE6aJvyYA",
+     width: "500",
+     height: "500"
+   },
+   {
+     src: "https://media-exp1.licdn.com/dms/image/C5603AQETOdLrXlWgoQ/profile-displayphoto-shrink_400_400/0/1580216617448?e=1657756800&v=beta&t=qcY9Gij7fm1JN91BCaPofl4mhQ7u5zDMX8DY8rQ9Wvk",
+     width: "500",
+     height: "500"
+   },
+   {
+     src: "https://media-exp1.licdn.com/dms/image/C5603AQFijsPKTIPr2A/profile-displayphoto-shrink_400_400/0/1616436160272?e=1657756800&v=beta&t=nAuCzY60Ie2BgWN_5JGM2D-FzGbxHMGsu8Hd6win3Ag",
+     width: "500",
+     height: "500"
+   },
+   {
+     src: "https://media-exp1.licdn.com/dms/image/C4D03AQHHNmr08E8RxQ/profile-displayphoto-shrink_400_400/0/1638186457593?e=1657756800&v=beta&t=WLbunODeHBXxh3j81zncVygSKRmem_3IHtevm0BJWLk",
+     width: "500",
+     height: "500"
+   },
+   {
+     src: "https://media-exp1.licdn.com/dms/image/C4E03AQG_r544H6t6Cg/profile-displayphoto-shrink_400_400/0/1622547004284?e=1657756800&v=beta&t=zuAwTytGZV5jAijbb7t6mLjXYOfGoo0bYowaTxpJsPg",
+     width: "500",
+     height: "500"
+   },
+   {
+     src: "https://media-exp1.licdn.com/dms/image/C4D03AQFRhvVJBPhnrw/profile-displayphoto-shrink_400_400/0/1550440249690?e=1657756800&v=beta&t=xRSNu37u8dferfq4XOi55b_qmFc1MX6oKRLePWnHYg4",
+     width: "500",
+     height: "500"
+   },
+   {
+     src: "https://media-exp1.licdn.com/dms/image/C4D03AQH271JgjijJgA/profile-displayphoto-shrink_400_400/0/1642168356740?e=1657756800&v=beta&t=Xe2QNwnLvZdF-_uKzOzEHhb1WX5aKW3gS1aNji7jPPM",
+     width: "500",
+     height: "500"
+   },
+   {
+     src: "https://media-exp1.licdn.com/dms/image/C4E03AQFj_9F01ZnHLA/profile-displayphoto-shrink_400_400/0/1535947207679?e=1657756800&v=beta&t=3YG5lQTuR4imZPMzcKTIjmZ5oFrf0gZsVJQTOkXv0FY",
+     width: "500",
+     height: "500"
+   },
+      {
+     src: "https://media-exp1.licdn.com/dms/image/C4E03AQG2_kdgIc0i6A/profile-displayphoto-shrink_400_400/0/1646776948365?e=1657756800&v=beta&t=Vf1XGFMAjwUKNLPSqUzLf-Pxidzv49hJwpFYhr1U2tI",
+     width: "500",
+     height: "500"
+   },
+         {
+     src: "https://media-exp1.licdn.com/dms/image/C4E03AQG2_kdgIc0i6A/profile-displayphoto-shrink_400_400/0/1646776948365?e=1657756800&v=beta&t=Vf1XGFMAjwUKNLPSqUzLf-Pxidzv49hJwpFYhr1U2tI",
+     width: "500",
+     height: "500"
+   },
+         {
+     src: "https://media-exp1.licdn.com/dms/image/C4E03AQG2_kdgIc0i6A/profile-displayphoto-shrink_400_400/0/1646776948365?e=1657756800&v=beta&t=Vf1XGFMAjwUKNLPSqUzLf-Pxidzv49hJwpFYhr1U2tI",
+     width: "500",
+     height: "500"
+   },
+         {
+     src: "https://media-exp1.licdn.com/dms/image/C4E03AQG2_kdgIc0i6A/profile-displayphoto-shrink_400_400/0/1646776948365?e=1657756800&v=beta&t=Vf1XGFMAjwUKNLPSqUzLf-Pxidzv49hJwpFYhr1U2tI",
+     width: "500",
+     height: "500"
+   },
+         {
+     src: "https://media-exp1.licdn.com/dms/image/C4E03AQG2_kdgIc0i6A/profile-displayphoto-shrink_400_400/0/1646776948365?e=1657756800&v=beta&t=Vf1XGFMAjwUKNLPSqUzLf-Pxidzv49hJwpFYhr1U2tI",
+     width: "500",
+     height: "500"
+   },
+         {
+     src: "https://media-exp1.licdn.com/dms/image/C4E03AQG2_kdgIc0i6A/profile-displayphoto-shrink_400_400/0/1646776948365?e=1657756800&v=beta&t=Vf1XGFMAjwUKNLPSqUzLf-Pxidzv49hJwpFYhr1U2tI",
+     width: "500",
+     height: "500"
+   },
+         {
+     src: "https://media-exp1.licdn.com/dms/image/C4E03AQG2_kdgIc0i6A/profile-displayphoto-shrink_400_400/0/1646776948365?e=1657756800&v=beta&t=Vf1XGFMAjwUKNLPSqUzLf-Pxidzv49hJwpFYhr1U2tI",
+     width: "500",
+     height: "500"
+   },
+         {
+     src: "https://media-exp1.licdn.com/dms/image/C4E03AQG2_kdgIc0i6A/profile-displayphoto-shrink_400_400/0/1646776948365?e=1657756800&v=beta&t=Vf1XGFMAjwUKNLPSqUzLf-Pxidzv49hJwpFYhr1U2tI",
+     width: "500",
+     height: "500"
+   },
+   {
+     src: "https://media-exp1.licdn.com/dms/image/C4E03AQG2_kdgIc0i6A/profile-displayphoto-shrink_400_400/0/1646776948365?e=1657756800&v=beta&t=Vf1XGFMAjwUKNLPSqUzLf-Pxidzv49hJwpFYhr1U2tI",
+     width: "500",
+     height: "500"
+   },
+   {
+     src: "https://media-exp1.licdn.com/dms/image/C4E03AQG2_kdgIc0i6A/profile-displayphoto-shrink_400_400/0/1646776948365?e=1657756800&v=beta&t=Vf1XGFMAjwUKNLPSqUzLf-Pxidzv49hJwpFYhr1U2tI",
+     width: "500",
+     height: "500"
+   },
+   {
+     src: "https://media-exp1.licdn.com/dms/image/C4E03AQG2_kdgIc0i6A/profile-displayphoto-shrink_400_400/0/1646776948365?e=1657756800&v=beta&t=Vf1XGFMAjwUKNLPSqUzLf-Pxidzv49hJwpFYhr1U2tI",
+     width: "500",
+     height: "500"
+   },
+   {
+     src: "https://media-exp1.licdn.com/dms/image/C4E03AQG2_kdgIc0i6A/profile-displayphoto-shrink_400_400/0/1646776948365?e=1657756800&v=beta&t=Vf1XGFMAjwUKNLPSqUzLf-Pxidzv49hJwpFYhr1U2tI",
+     width: "500",
+     height: "500"
+   },
+   {
+     src: "https://media-exp1.licdn.com/dms/image/C4E03AQG2_kdgIc0i6A/profile-displayphoto-shrink_400_400/0/1646776948365?e=1657756800&v=beta&t=Vf1XGFMAjwUKNLPSqUzLf-Pxidzv49hJwpFYhr1U2tI",
+     width: "500",
+     height: "500"
+   },
+   {
+     src: "https://media-exp1.licdn.com/dms/image/C4E03AQG2_kdgIc0i6A/profile-displayphoto-shrink_400_400/0/1646776948365?e=1657756800&v=beta&t=Vf1XGFMAjwUKNLPSqUzLf-Pxidzv49hJwpFYhr1U2tI",
+     width: "500",
+     height: "500"
+   },
+   {
+     src: "https://media-exp1.licdn.com/dms/image/C4E03AQG2_kdgIc0i6A/profile-displayphoto-shrink_400_400/0/1646776948365?e=1657756800&v=beta&t=Vf1XGFMAjwUKNLPSqUzLf-Pxidzv49hJwpFYhr1U2tI",
+     width: "500",
+     height: "500"
+   },
+   {
+     src: "https://media-exp1.licdn.com/dms/image/C4E03AQG2_kdgIc0i6A/profile-displayphoto-shrink_400_400/0/1646776948365?e=1657756800&v=beta&t=Vf1XGFMAjwUKNLPSqUzLf-Pxidzv49hJwpFYhr1U2tI",
+     width: "500",
+     height: "500"
+   },
+   {
+     src: "https://media-exp1.licdn.com/dms/image/C4E03AQG2_kdgIc0i6A/profile-displayphoto-shrink_400_400/0/1646776948365?e=1657756800&v=beta&t=Vf1XGFMAjwUKNLPSqUzLf-Pxidzv49hJwpFYhr1U2tI",
+     width: "500",
+     height: "500"
+   },
+   {
+     src: "https://media-exp1.licdn.com/dms/image/C4E03AQG2_kdgIc0i6A/profile-displayphoto-shrink_400_400/0/1646776948365?e=1657756800&v=beta&t=Vf1XGFMAjwUKNLPSqUzLf-Pxidzv49hJwpFYhr1U2tI",
+     width: "500",
+     height: "500"
+   },
+   {
+     src: "https://media-exp1.licdn.com/dms/image/C4E03AQG2_kdgIc0i6A/profile-displayphoto-shrink_400_400/0/1646776948365?e=1657756800&v=beta&t=Vf1XGFMAjwUKNLPSqUzLf-Pxidzv49hJwpFYhr1U2tI",
+     width: "500",
+     height: "500"
+   },
+   {
+     src: "https://media-exp1.licdn.com/dms/image/C4E03AQG2_kdgIc0i6A/profile-displayphoto-shrink_400_400/0/1646776948365?e=1657756800&v=beta&t=Vf1XGFMAjwUKNLPSqUzLf-Pxidzv49hJwpFYhr1U2tI",
+     width: "500",
+     height: "500"
+   },
+   {
+     src: "https://media-exp1.licdn.com/dms/image/C4E03AQG2_kdgIc0i6A/profile-displayphoto-shrink_400_400/0/1646776948365?e=1657756800&v=beta&t=Vf1XGFMAjwUKNLPSqUzLf-Pxidzv49hJwpFYhr1U2tI",
+     width: "500",
+     height: "500"
+    } ];
+    
+    //find the length of the array of images
+    var arrayLength = imageArray.length;
+    var newArray = [];
+    for (var i = 0; i < arrayLength; i++) {
+        newArray[i] = new Image();
+        newArray[i].src = imageArray[i].src;
+        newArray[i].width = imageArray[i].width;
+        newArray[i].height = imageArray[i].height;
+    }
+   
+  // create random image number
+  function getRandomNum(min, max) 
+  {
+      // generate and return a random number for the image to be displayed 
+      imgNo = Math.floor(Math.random() * (max - min + 1)) + min;
+      return newArray[imgNo];
+  }  
+
+  // 0 is first image and (preBuffer.length - 1) is last image of the array
+  var newImage = getRandomNum(0, newArray.length - 1);
+ 
+  // remove the previous images
+  var images = document.getElementsByTagName('img');
+  var l = images.length;
+  for (var p = 0; p < l; p++) {
+     images[0].parentNode.removeChild(images[0]);
+  }
+  // display the new random image  
+  document.body.appendChild(newImage);
+}
+</script>
+
+<body>
+<div>
+<center>
+<h1 style="color:green">Yousef Suliman Generator</h1>
+<h4>Click the button to generate and display an image of a Yousef Suliman on the webpage.</h4>
+<button class="button2" onclick="displayRandomImages();">Generate a Yousef</button>
+</center> 
+</div>
+</body>
+</html>
+
+ 
