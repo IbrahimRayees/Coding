@@ -1,0 +1,52 @@
+<html>
+<head> 
+<title> Yousef Suliman Generator </title>
+</head>
+<style type="text/css">
+h1 {
+	font-size: 100px;
+}
+
+h4 {
+	margin: 12px;
+}
+
+.button2 {
+  color: white;
+  background-color: #222;
+  border-radius: 30px;
+  margin: 10px 20px;
+}
+</style>
+<script>
+function getRandomImage() {
+var randomImage = new Array();
+
+randomImage[0] = "https://media-exp1.licdn.com/dms/image/C4D03AQHwjb-judtHlw/profile-displayphoto-shrink_400_400/0/1595820837419?e=1657756800&v=beta&t=6sULDr0mL2w-AWMpgwwwikbVrv9ZSUVwQuq0BUeW31U";
+randomImage[1] = "https://media-exp1.licdn.com/dms/image/C4E03AQEG9S_Hhi6y-Q/profile-displayphoto-shrink_400_400/0/1639064345769?e=1657756800&v=beta&t=GimuntV5L99VelUh8aFXAQENfOGrTkZsgnRrm6Qu-ow";
+randomImage[2] = "https://media-exp1.licdn.com/dms/image/C5603AQEAyZETnbWNyg/profile-displayphoto-shrink_400_400/0/1588619501478?e=1657756800&v=beta&t=S2kMoSNuSkjb-gvO7MVr80TN91bio6IJpPpE6aJvyYA";
+randomImage[3] = "https://media-exp1.licdn.com/dms/image/C5603AQETOdLrXlWgoQ/profile-displayphoto-shrink_400_400/0/1580216617448?e=1657756800&v=beta&t=qcY9Gij7fm1JN91BCaPofl4mhQ7u5zDMX8DY8rQ9Wvk";
+randomImage[4] = "https://media-exp1.licdn.com/dms/image/C5603AQFijsPKTIPr2A/profile-displayphoto-shrink_400_400/0/1616436160272?e=1657756800&v=beta&t=nAuCzY60Ie2BgWN_5JGM2D-FzGbxHMGsu8Hd6win3Ag";
+randomImage[5] = "https://media-exp1.licdn.com/dms/image/C4D03AQHHNmr08E8RxQ/profile-displayphoto-shrink_400_400/0/1638186457593?e=1657756800&v=beta&t=WLbunODeHBXxh3j81zncVygSKRmem_3IHtevm0BJWLk";
+randomImage[6] = "https://media-exp1.licdn.com/dms/image/C4E03AQG_r544H6t6Cg/profile-displayphoto-shrink_400_400/0/1622547004284?e=1657756800&v=beta&t=zuAwTytGZV5jAijbb7t6mLjXYOfGoo0bYowaTxpJsPg";
+randomImage[7] = "https://media-exp1.licdn.com/dms/image/C4D03AQFRhvVJBPhnrw/profile-displayphoto-shrink_400_400/0/1550440249690?e=1657756800&v=beta&t=xRSNu37u8dferfq4XOi55b_qmFc1MX6oKRLePWnHYg4";
+randomImage[8] = "https://media-exp1.licdn.com/dms/image/C4D03AQH271JgjijJgA/profile-displayphoto-shrink_400_400/0/1642168356740?e=1657756800&v=beta&t=Xe2QNwnLvZdF-_uKzOzEHhb1WX5aKW3gS1aNji7jPPM";
+randomImage[9] = "https://media-exp1.licdn.com/dms/image/C4E03AQFj_9F01ZnHLA/profile-displayphoto-shrink_400_400/0/1535947207679?e=1657756800&v=beta&t=3YG5lQTuR4imZPMzcKTIjmZ5oFrf0gZsVJQTOkXv0FY";
+randomImage[10] = "https://media-exp1.licdn.com/dms/image/C4E03AQG2_kdgIc0i6A/profile-displayphoto-shrink_400_400/0/1646776948365?e=1657756800&v=beta&t=Vf1XGFMAjwUKNLPSqUzLf-Pxidzv49hJwpFYhr1U2tI";
+
+var number = Math.floor(Math.random()*randomImage.length);
+
+return document.getElementById("result").innerHTML = '<img src="'+randomImage[number]+'" />';
+}
+
+</script>
+<body>
+<center><h1 style="color:green"> Yousef Suliman Generator </h1></center>
+<h4> Click the button to generate and display an image of a Yousef Suliman on the webpage </h4> 
+<button class="button2" onclick = "setInterval(getRandomImage, 2000)"> Generate Image </button>
+<br> <br>
+<span id="result" align="center"> </span> 
+</body>  
+</html>
+
+ 
